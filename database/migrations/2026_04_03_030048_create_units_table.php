@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('units', function (Blueprint $table) {
             $table->id();
             
+            // $table->unsignedBigInteger('property_id');
+            // $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
+
              $table->string('property_id');
              $table->string('tenant_id');
              $table->string('start_date');

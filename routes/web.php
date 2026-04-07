@@ -15,7 +15,6 @@ Route::get('/unit', function () {
 });
 
 
-
 Route::get('/payment', function () {
     return view('payment.payment');
 });
