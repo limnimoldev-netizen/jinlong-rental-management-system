@@ -1,27 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <title>Property</title>
-</head>
-<body>
-    <h1 class="bg-blue-400 text-xl p-20 ">
-       
-        
-        <form action="{{ route('properties.store') }}" method="POST">
-            @csrf
-            <input type="text" placeholder="name" value="">
-            <input type="phone" placeholder="phone number" >
+@extends('layouts.app')
 
-            <button type="submit">Go Go submit</button>
-        </form>
+@section('content')
 
+    <h1>Properties Page</h1>
 
-    </h1>
-    
-    
-</body>
-</html>
+    <form action="{{ route('properties.store') }}" method="POST" class="p-4">
+        @csrf
 
+        <input type="text" name="name"placeholder="Name"class="border p-2 mb-2"
+        >
+
+        <input 
+            type="tel" 
+            name="phone"
+            placeholder="Phone number"
+            class="border p-2 mb-2"
+        >
+
+        <button type="submit" class="bg-green-500 text-white p-2">
+            Submit
+        </button>
+
+    </form>
+
+@endsection

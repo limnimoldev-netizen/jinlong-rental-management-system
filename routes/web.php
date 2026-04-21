@@ -14,41 +14,37 @@ Route::get('/tenants', [TenantController::class, 'index']);
 Route::get('/payments', [PaymentController::class, 'index']);
 Route::get('/maintenance_requests', [MaintenanceRequestController::class, 'index']);
 
-Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+
+
 
 
 Route::get('/', function () {
     return view('login');
 });
 
-
 Route::get('/properties', function () {
-    return view('properties/properties');
+    return view('properties.properties');
 });
 
-
 Route::get('/units', function () {
-    return view('units/units');
+    return view('units.units');
 });
 
 Route::get('/tenants', function () {
-    return view('tenants/tenants');
+    return view('tenants.tenants');
 });
 
 Route::get('/leases', function () {
-    return view('leases/leases');
+    return view('leases.leases');
 });
 
 Route::get('/payments', function () {
-    return view('payments/payments');
+    return view('payments.payments');
 });
-
 
 Route::get('/maintenance_requests', function () {
-    return view('maintenance_requests/maintenance_requests');
+    return view('maintenance_requests.maintenance_requests');
 });
 
-
-
-
+Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
   
