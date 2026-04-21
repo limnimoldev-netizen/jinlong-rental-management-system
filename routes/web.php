@@ -14,16 +14,18 @@ Route::get('/tenants', [TenantController::class, 'index']);
 Route::get('/payments', [PaymentController::class, 'index']);
 Route::get('/maintenance_requests', [MaintenanceRequestController::class, 'index']);
 
+Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+
 
 Route::get('/', function () {
     return view('login');
 });
 
 
-
 Route::get('/properties', function () {
     return view('properties/properties');
 });
+
 
 Route::get('/units', function () {
     return view('units/units');
@@ -40,6 +42,7 @@ Route::get('/leases', function () {
 Route::get('/payments', function () {
     return view('payments/payments');
 });
+
 
 Route::get('/maintenance_requests', function () {
     return view('maintenance_requests/maintenance_requests');
