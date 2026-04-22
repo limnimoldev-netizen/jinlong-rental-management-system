@@ -6,13 +6,14 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\TenantController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\MaintenanceRequestController;
+use App\Http\Controllers\DashboardController;
 
 
-Route::get('/properties', [PropertyController::class, 'index']);
-Route::get('/units', [UnitController::class, 'index']);
-Route::get('/tenants', [TenantController::class, 'index']);
-Route::get('/payments', [PaymentController::class, 'index']);
-Route::get('/maintenance_requests', [MaintenanceRequestController::class, 'index']);
+Route::get('properties', [PropertyController::class, 'index']);
+Route::get('units', [UnitController::class, 'index']);
+Route::get('tenants', [TenantController::class, 'index']);
+Route::get('payments', [PaymentController::class, 'index']);
+Route::get('maintenance_requests', [MaintenanceRequestController::class, 'index']);
 
 
 

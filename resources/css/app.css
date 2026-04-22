@@ -10,21 +10,4 @@
 @source "../**/*.js";
 
 
-/* @import "tailwindcss";
 
-@theme {
-    --font-san:  "Roboto", sans-serif;
-    --color-primary: #00BFFE;
-    --color-secondary: #FDFBF9;
-}
-
-.container{
-    width: 1280px;
-    margin: 0 auto;
-}
-
-.banner{
-    margin-top: 100px;
-    
-}
- */

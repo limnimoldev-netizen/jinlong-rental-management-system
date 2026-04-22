@@ -17,7 +17,7 @@ class PropertyController extends Controller
 
         public function store(Request $request){
             $name= $request->input('name');
-           dd($request);
+            dd($request);
         }
 
 
