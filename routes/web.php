@@ -6,7 +6,6 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\TenantController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\MaintenanceRequestController;
-use App\Http\Controllers\DashboardController;
 
 
 Route::get('properties', [PropertyController::class, 'index']);
@@ -47,5 +46,8 @@ Route::get('/maintenance_requests', function () {
     return view('maintenance_requests.maintenance_requests');
 });
 
+
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+Route::post('/units', [UnitController::class, 'store'])->name('units.store');
+Route::post('/tenants', [TenantController::class, 'store'])->name('tenants.store');
   

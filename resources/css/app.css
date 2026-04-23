@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @import "tailwindcss";
 
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
@@ -10,4 +11,17 @@
 @source "../**/*.js";
 
 
+@theme {
+    --font-sans: "Roboto", sans-serif;
+    --color-primary: #9b8384;
+    --color-secondary: #f6f4f0;
+}
 
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.banner {
+    margin-top: 100px;
+}

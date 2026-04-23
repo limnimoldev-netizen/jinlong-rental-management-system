@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+        
         Schema::create('maintenance_requests', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('property_id');
+            $table->foreignId('tenant_id');
+            $table->text('description');
+            $table->string('status')->default('pending');
+            $table->string('issue');
             $table->timestamps();
         });
     }

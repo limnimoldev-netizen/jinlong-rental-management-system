@@ -14,12 +14,9 @@ class PropertyController extends Controller
         return view('properties.store');
 
     }  
-
         public function store(Request $request){
             $name= $request->input('name');
             dd($request);
         }
-
-
 
 };

@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
+        
         Schema::create('units', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('property_id')->constrained()->onDelete('cascade');
+            $table->string('unit_number');
+            $table->decimal('price', 10, 2);
+            $table->string('status')->default('available'); 
             $table->timestamps();
         });
     }
