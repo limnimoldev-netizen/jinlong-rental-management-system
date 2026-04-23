@@ -6,29 +6,31 @@
     @vite('resources/css/app.css')
     <title>Property</title>
 </head>
-<body class="font-sans">
+<body>
     @extends('layouts.app')
 
     @section('content')
 
-    <div class=" container p-6 banner">
+    <div class="  container p-6 banner">
     
-        <div class="flex justify-between items-end mb-8">
+        <div class="flex justify-between  mb-8">
+            
             <div>
-                <h1 class="text-2xl font-bold text-gray-800">Property Overview</h1>
+                <h1 class=" text-xl font-bold text-[#333]">Properties</h1>
                 <p class="text-gray-500 text-sm">Manage and monitor your real estate portfolio</p>
             </div>
+
             <div class="flex gap-2">
-                <button class="bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-50">
+                <button class="bg-white border  text-[#333] px-4 py-2 rounded-lg text-base font-medium ">
                     Export Report
                 </button>
-                <button class="bg-primary text-[#f6f4f0] px-4 py-2 rounded-lg text-sm font-medium shadow-sm hover:opacity-90">
+                <button class="bg-primary  px-3 py-2 rounded-lg text-white text-base font-medium shadow-sm ">
                     + Add Property
                 </button>
+                
             </div>
         </div>
 
-      
     </div>
 
     @endsection

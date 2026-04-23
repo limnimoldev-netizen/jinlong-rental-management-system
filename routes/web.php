@@ -50,4 +50,3 @@ Route::get('/maintenance_requests', function () {
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::post('/units', [UnitController::class, 'store'])->name('units.store');
 Route::post('/tenants', [TenantController::class, 'store'])->name('tenants.store');
-  
