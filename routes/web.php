@@ -16,6 +16,19 @@ Route::get('maintenance_requests', [MaintenanceRequestController::class, 'index'
 
 
 
+Route::post('/login', function () {
+
+    $email = request('email');
+    $password = request('password');
+
+    if ($email === 'admin@gmail.com' && $password === '123456') {
+        return redirect('/properties');
+    }
+
+    return back();
+
+});
+
 
 
 Route::get('/', function () {
@@ -50,3 +63,6 @@ Route::get('/maintenance_requests', function () {
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::post('/units', [UnitController::class, 'store'])->name('units.store');
 Route::post('/tenants', [TenantController::class, 'store'])->name('tenants.store');
+Route::post('/leases', [LeaseController::class, 'store'])->name('leases.store');
+Route::post('/payments', [PaymentController::class, 'store'])->name('payments.store');
+Route::post('/maintenance_requests', [MaintenanceRequestController::class, 'store'])->name('maintenance-requests.store');   

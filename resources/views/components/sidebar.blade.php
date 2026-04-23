@@ -1,11 +1,81 @@
-<aside class="w-64 h-screen fixed top-0 left-0 shadow-lg z-50"
-       style="background: #9b8384; color: #f6f4f0;">
-    <div class="p-6 flex items-center gap-3 border-b border-white/10">
-        <div class="bg-white/20 p-2 rounded-lg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-        </div>
-        <span class="font-bold tracking-tight">Rental System</span>
+<aside class="fixed top-0 left-0 h-screen w-64 bg-primary text-secondary shadow-lg flex flex-col">
+
+    <div class=" flex items-center gap-3 px-4 border-b border-white/10">
+        <img src="{{ asset('images/logo.png') }}" 
+         alt="Logo" 
+        class="w-13 h-13 object-contain">
     </div>
 
-    
+    <nav class="flex-1 px-4 py-6 space-y-6 text-sm">
+
+        <div>
+            <p class="text-base opacity-70 mb-2">Menu</p>
+
+            <a href="{{ route('properties.store') }}"
+               class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
+               {{ request()->routeIs('properties.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
+                <i class="fa-solid fa-building"></i>
+                Properties
+            </a>
+
+            <a href="{{ route('units.store') }}"
+               class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
+               {{ request()->routeIs('units.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
+                <i class="fa-solid fa-door-open"></i>
+                Units
+            </a>
+
+            <a href="{{ route('tenants.store') }}"
+               class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
+               {{ request()->routeIs('tenants.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
+                <i class="fa-solid fa-users"></i>
+                Tenants
+            </a>
+
+            <a href="{{ route('leases.store') }}"
+               class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
+               {{ request()->routeIs('leases.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
+                <i class="fa-solid fa-file-contract"></i>
+                Leases
+            </a>
+
+            <a href="{{ route('payments.store') }}"
+               class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
+               {{ request()->routeIs('payments.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
+                <i class="fa-solid fa-credit-card"></i>
+                Payments
+            </a>
+
+            <a href="{{ route('maintenance-requests.store') }}"
+               class="flex items-center font-bold  gap-3 px-4 py-2 rounded-lg
+               {{ request()->routeIs('maintenance-requests.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Maintenance
+            </a>
+        </div>
+
+       
+
+        <div>
+            <p class="text-base opacity-70 mb-2">Help and Support</p>
+
+            <a href="#"
+               class="flex items-center gap-3 px-4 py-2 font-bold rounded-lg hover:bg-white/10">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </div>
+
+    </nav>
+
+    <div class="p-4 border-t border-white/10">
+        <form method="POST" action="#">
+            @csrf
+            <button class="w-full flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-red-500/20">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+        </form>
+    </div>
+
 </aside>
