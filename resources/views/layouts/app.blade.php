@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <title>Rental System</title>
+    <title>Rental Jinlong</title>
 </head>
 
 <body class="bg-secondary">
@@ -21,6 +21,7 @@
 
         <div class="ml-64 p-6 w-full mt-16">
             @yield('content')
+
         </div>
     </div>
 

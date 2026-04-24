@@ -11,10 +11,8 @@
 <body class="min-h-screen flex items-center justify-center"
       style="background: #f0e7d5;">
 
-    <!-- SINGLE LOGIN BOX -->
     <div class="w-[400px] bg-white rounded-2xl shadow-lg p-8">
 
-        <!-- Logo -->
         <div class="flex justify-center mb-4">
             <img src="{{ asset('images/logo.png') }}" class="w-14 h-14">
         </div>

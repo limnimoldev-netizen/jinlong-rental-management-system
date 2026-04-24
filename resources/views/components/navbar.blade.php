@@ -4,9 +4,9 @@
 
         <div class="relative w-full">
             <input type="text" placeholder="Search..."
-                class="w-full bg-white/10 text-sm px-4 py-2 pl-10 rounded-lg outline-none focus:bg-white/20">
+                class="w-full bg-white text-sm px-4 py-2 pl-10 rounded-lg outline-none focus:bg-white/20">
 
-            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-sm opacity-70"></i>
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 text-black -translate-y-1/2 text-sm "></i>
         </div>
 
     </div>
@@ -15,21 +15,20 @@
 
         <button class="relative hover:bg-white/10 p-2 rounded-lg">
             <i class="fa-solid fa-bell text-lg"></i>
-            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
         </button>
 
         <div class="flex items-center gap-3 px-3 py-1 rounded-lg hover:bg-white/10 cursor-pointer">
 
             <div class="leading-tight">
                 <p class="text-sm font-semibold">
-                    {{ Auth::user()->name ?? 'Admin' }}
+                    {{ Auth::user()->name ?? 'nimol' }}
                 </p>
                 <p class="text-xs opacity-70">
                     {{ Auth::user()->email ?? 'apaav@gmail.com' }}
                 </p>
             </div>
 
-            <i class="fa-solid fa-chevron-down text-xs opacity-70"></i>
+            <!-- <i class="fa-solid fa-chevron-down text-xs opacity-70"></i> -->
 
         </div>
 

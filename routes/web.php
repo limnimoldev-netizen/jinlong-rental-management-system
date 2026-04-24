@@ -14,6 +14,9 @@ Route::get('tenants', [TenantController::class, 'index']);
 Route::get('payments', [PaymentController::class, 'index']);
 Route::get('maintenance_requests', [MaintenanceRequestController::class, 'index']);
 
+// for call show.blade.php
+Route::get('properties/{id}', [PropertyController::class, 'show']);
+
 
 
 Route::post('/login', function () {
@@ -21,13 +24,14 @@ Route::post('/login', function () {
     $email = request('email');
     $password = request('password');
 
-    if ($email === 'admin@gmail.com' && $password === '123456') {
+    if ($email === 'limnimol.dev@gmail.com' && $password === '123456') {
         return redirect('/properties');
     }
 
     return back();
 
 });
+
 
 
 
@@ -38,6 +42,10 @@ Route::get('/', function () {
 Route::get('/properties', function () {
     return view('properties.properties');
 });
+
+
+
+
 
 Route::get('/units', function () {
     return view('units.units');
