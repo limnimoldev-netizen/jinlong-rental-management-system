@@ -19,28 +19,21 @@
         <div class="bg-white p-4 rounded-lg shadow border-4 border-[#9b8384]">
             <p class="text-sm text-gray-500">Total Properties</p>
             
-            <h2 class="text-2xl font-bold">{{ $properties->count() }}</h2>
         </div>
 
         <div class="bg-white p-4 rounded-lg shadow border-4 border-[#9b8384]">
             <p class="text-sm text-gray-500">Active</p>
-            <h2 class="text-2xl font-bold">
-                {{ $properties->where('status','Active')->count() }}
-            </h2>
+            
         </div>
 
         <div class="bg-white p-4 rounded-lg shadow border-4 border-[#9b8384]">
             <p class="text-sm text-gray-500">Vacant</p>
-            <h2 class="text-2xl font-bold">
-                {{ $properties->where('status','Vacant')->count() }}
-            </h2>
+            
         </div>
 
         <div class="bg-white p-4 rounded-lg shadow border-4 border-[#9b8384]">
             <p class="text-sm text-gray-500">Total Units</p>
-            <h2 class="text-2xl font-bold">
-                {{ $properties->sum('units') }}
-            </h2>
+            
         </div>
 
     </div>
@@ -59,49 +52,7 @@
                 </tr>
             </thead>
 
-            <tbody>
-
-                @foreach($properties as $property)
-                <tr class="border-b">
-
-                    <td class="px-4 py-2 font-medium">{{ $property->name }}</td>
-                    <td class="px-4 py-2">{{ $property->type }}</td>
-                    <td class="px-4 py-2">{{ $property->status }}</td>
-                    <td class="px-4 py-2">{{ $property->units }}</td>
-                    <td class="px-4 py-2 flex gap-3">
-
-                        <a href="/properties/{{ $property->id }}" class="text-blue-500">
-                            View
-                        </a>
-
-                        <a href="/properties/{{ $property->id }}/edit" class="text-green-500">
-                            Edit
-                        </a>
-
-                        <form action="/properties/{{ $property->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-
-                            <button class="text-red-500">
-                                Delete
-                            </button>
-                        </form>
-
-                    </td>
-
-                </tr>
-                @endforeach
-
-                <!-- EMPTY STATE -->
-                @if($properties->count() == 0)
-                <tr>
-                    <td colspan="5" class="text-center py-4 text-gray-400">
-                        No data yet
-                    </td>
-                </tr>
-                @endif
-
-            </tbody>
+            
 
         </table>
 

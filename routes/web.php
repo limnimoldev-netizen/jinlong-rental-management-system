@@ -8,31 +8,13 @@ use App\Http\Controllers\TenantController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\MaintenanceRequestController;
 
-
-
-Route::get('properties', [PropertyController::class, 'index']);
-Route::post('properties', [PropertyController::class, 'store'])->name('properties.store');
-
-Route::get('properties/create', function () {
-    return view('properties.create');
-});
-
-Route::get('properties/{id}', [PropertyController::class, 'show']);
-
-// Properties
-
-
-
-
-
-
-
-
 Route::get('dashboards', [DashboardController::class, 'index']);
+Route::get('properties', [PropertyController::class, 'index']);
 Route::get('units', [UnitController::class, 'index']);
 Route::get('tenants', [TenantController::class, 'index']);
 Route::get('payments', [PaymentController::class, 'index']);
 Route::get('maintenance_requests', [MaintenanceRequestController::class, 'index']);
+
 
 
 Route::post('/login', function () {
@@ -40,7 +22,7 @@ Route::post('/login', function () {
     $email = request('email');
     $password = request('password');
 
-    if ($email === 'limnimol.dev@gmail.com' && $password === '123456') {
+    if ($email === 'admin@gmail.com' && $password === '123456') {
         return redirect('/properties');
     }
 
@@ -50,22 +32,13 @@ Route::post('/login', function () {
 
 
 
-
 Route::get('/', function () {
     return view('login');
 });
 
 
-Route::get('/dashboards', function () {
-    return view('dashboards.dashboards');
-});
-
 Route::get('/properties', function () {
     return view('properties.properties');
-});
-
-Route::get('properties/create', function () {
-    return view('properties.create');
 });
 
 Route::get('/units', function () {
@@ -88,9 +61,14 @@ Route::get('/maintenance_requests', function () {
     return view('maintenance_requests.maintenance_requests');
 });
 
+
+Route::get('properties/{id}', [PropertyController::class, 'show']);
+
+
 Route::post('/dashboards', [DashboardController::class, 'store'])->name('dashboards.store');
+Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::post('/units', [UnitController::class, 'store'])->name('units.store');
 Route::post('/tenants', [TenantController::class, 'store'])->name('tenants.store');
 Route::post('/leases', [LeaseController::class, 'store'])->name('leases.store');
 Route::post('/payments', [PaymentController::class, 'store'])->name('payments.store');
-Route::post('/maintenance_requests', [MaintenanceRequestController::class, 'store'])->name('maintenance-requests.store');   
+Route::post('/maintenance_requests', [MaintenanceRequestController::class, 'store'])->name('maintenance-requests.store');
