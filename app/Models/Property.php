@@ -14,8 +14,9 @@ class Property extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'name',
-        'location',
-        
+        'type',
+        'status',
+        'units',
     ];
 
     public function units(): HasMany

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\TenantController;
@@ -8,15 +9,30 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\MaintenanceRequestController;
 
 
+
 Route::get('properties', [PropertyController::class, 'index']);
+Route::post('properties', [PropertyController::class, 'store'])->name('properties.store');
+
+Route::get('properties/create', function () {
+    return view('properties.create');
+});
+
+Route::get('properties/{id}', [PropertyController::class, 'show']);
+
+// Properties
+
+
+
+
+
+
+
+
+Route::get('dashboards', [DashboardController::class, 'index']);
 Route::get('units', [UnitController::class, 'index']);
 Route::get('tenants', [TenantController::class, 'index']);
 Route::get('payments', [PaymentController::class, 'index']);
 Route::get('maintenance_requests', [MaintenanceRequestController::class, 'index']);
-
-// for call show.blade.php
-Route::get('properties/{id}', [PropertyController::class, 'show']);
-
 
 
 Route::post('/login', function () {
@@ -39,13 +55,18 @@ Route::get('/', function () {
     return view('login');
 });
 
+
+Route::get('/dashboards', function () {
+    return view('dashboards.dashboards');
+});
+
 Route::get('/properties', function () {
     return view('properties.properties');
 });
 
-
-
-
+Route::get('properties/create', function () {
+    return view('properties.create');
+});
 
 Route::get('/units', function () {
     return view('units.units');
@@ -67,8 +88,7 @@ Route::get('/maintenance_requests', function () {
     return view('maintenance_requests.maintenance_requests');
 });
 
-
-Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+Route::post('/dashboards', [DashboardController::class, 'store'])->name('dashboards.store');
 Route::post('/units', [UnitController::class, 'store'])->name('units.store');
 Route::post('/tenants', [TenantController::class, 'store'])->name('tenants.store');
 Route::post('/leases', [LeaseController::class, 'store'])->name('leases.store');

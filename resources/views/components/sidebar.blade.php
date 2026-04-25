@@ -10,11 +10,18 @@
 
         <div>
             <p class="text-base opacity-70 mb-2">Menu</p>
+            
+            <a href="{{ route('dashboards.store') }}"
+               class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
+               {{ request()->routeIs('dashboards.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
 
             <a href="{{ route('properties.store') }}"
                class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
                {{ request()->routeIs('properties.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
-                <i class="fa-solid fa-building"></i>
+                <i class="fa-solid fa-house"></i>
                 Properties
             </a>
 
@@ -35,7 +42,7 @@
             <a href="{{ route('leases.store') }}"
                class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
                {{ request()->routeIs('leases.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
-                <i class="fa-solid fa-file-contract"></i>
+                <i class="fa-solid fa-key"></i>
                 Leases
             </a>
 

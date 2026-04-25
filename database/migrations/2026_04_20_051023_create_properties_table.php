@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('location');
+            $table->string('type');
+            $table->string('status');
+            $table->integer('units');
             $table->timestamps();
         });
     }
