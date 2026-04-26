@@ -18,6 +18,9 @@ Route::get('properties/create', function () {
 });
 
 Route::get('properties/{id}', [PropertyController::class, 'show']);
+Route::get('properties/{id}/edit', [PropertyController::class, 'edit']);
+Route::put('properties/{id}', [PropertyController::class, 'update']);
+Route::delete('properties/{id}', [PropertyController::class, 'destroy']);
 
 // Properties
 
@@ -60,9 +63,6 @@ Route::get('/dashboards', function () {
     return view('dashboards.dashboards');
 });
 
-Route::get('/properties', function () {
-    return view('properties.properties');
-});
 
 Route::get('properties/create', function () {
     return view('properties.create');
@@ -71,6 +71,10 @@ Route::get('properties/create', function () {
 Route::get('/units', function () {
     return view('units.units');
 });
+
+Route::post('/leases', function () {
+    return 'Lease stored';
+})->name('leases.store');
 
 Route::get('/tenants', function () {
     return view('tenants.tenants');
@@ -91,6 +95,5 @@ Route::get('/maintenance_requests', function () {
 Route::post('/dashboards', [DashboardController::class, 'store'])->name('dashboards.store');
 Route::post('/units', [UnitController::class, 'store'])->name('units.store');
 Route::post('/tenants', [TenantController::class, 'store'])->name('tenants.store');
-Route::post('/leases', [LeaseController::class, 'store'])->name('leases.store');
 Route::post('/payments', [PaymentController::class, 'store'])->name('payments.store');
 Route::post('/maintenance_requests', [MaintenanceRequestController::class, 'store'])->name('maintenance-requests.store');   

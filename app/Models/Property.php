@@ -17,6 +17,8 @@ class Property extends Model
         'type',
         'status',
         'units',
+        'image',
+        'address',
     ];
 
     public function units(): HasMany
