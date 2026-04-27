@@ -46,8 +46,6 @@
                         <option value="Apartment" {{ $property->type == 'Apartment' ? 'selected' : '' }}>Apartment</option>
                         <option value="House" {{ $property->type == 'House' ? 'selected' : '' }}>House</option>
                         <option value="Condo" {{ $property->type == 'Condo' ? 'selected' : '' }}>Condo</option>
-                        <option value="Commercial" {{ $property->type == 'Commercial' ? 'selected' : '' }}>Commercial</option>
-                        <option value="Office" {{ $property->type == 'Office' ? 'selected' : '' }}>Office</option>
                     </select>
                 </div>
                 
@@ -88,7 +86,7 @@
                 <a href="/properties/{{ $property->id }}" class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">
                     Cancel
                 </a>
-                <button type="submit" class="bg-primary text-secondary px-6 py-2 rounded-lg hover:bg-blue-600">
+                <button type="submit" class="bg-blue-500 text-secondary px-6 py-2 rounded-lg hover:bg-blue-600">
                     Update Property
                 </button>
             </div>

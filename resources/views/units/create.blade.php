@@ -21,6 +21,7 @@
         </div>
 
     <div class="bg-white p-6 rounded-lg shadow">
+       
         <form action="/units" method="POST" class="space-y-6">
             @csrf
             

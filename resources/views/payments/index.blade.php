@@ -6,9 +6,9 @@
 
     <div class="flex justify-between items-center mb-6">
         <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
+            <!-- <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
                 <i class="fas fa-credit-card text-xl"></i>
-            </div>
+            </div> -->
             <div>
                 <h1 class="text-[26px] font-bold">Payments</h1>
                 <p class="text-gray-500 text-sm">Manage all payment transactions</p>

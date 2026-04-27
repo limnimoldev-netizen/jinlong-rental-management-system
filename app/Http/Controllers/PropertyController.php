@@ -10,58 +10,32 @@ class PropertyController extends Controller
 {
     public function index()
     {
-        $properties = Property::all();
 
-        return view('properties.properties', compact('properties'));
+        $properties = Property::paginate(5);
+        
+        return view('properties.index', compact('properties'));
+
     }
 
     public function store(Request $request)
     {
-        Property::create([
-            'name' => $request->name,
-            'type' => $request->type,
-            'status' => $request->status,
-            'units' => $request->units,
-        ]);
-
-        return redirect('/properties');
-    }
-
-    public function show($id)
-    {
-        $property = Property::find($id);
-
-        return view('properties.show', compact('property'));
-    }
-
-    public function edit($id)
-    {
-        $property = Property::find($id);
-
-        return view('properties.edit', compact('property'));
-    }
-
-    public function update(Request $request, $id)
-    {
-        $property = Property::find($id);
+        $name= $request->input('name');
+        $type= $request->input('type');
+        $status= $request->input('status');
+        $units= $request->input('units');
         
-        $property->update([
-            'name' => $request->name,
-            'type' => $request->type,
-            'status' => $request->status,
-            'units' => $request->units,
+            Property::create([
+            'name' => $name,
+            'type' => $type,
+            'status' => $status,
+            'units' => $units,
         ]);
 
-        return redirect('/properties/' . $id);
+        // return redirect() -> route('properties.properties');
+        return redirect('/properties') ;
+
     }
 
-    public function destroy($id)
-    {
-        $property = Property::find($id);
-        $property->delete();
-
-        return redirect('/properties');
-    }
 
 };
 

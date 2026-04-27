@@ -76,7 +76,6 @@
         </div>
     </div>
 
-    <!-- UNITS SECTION -->
     <div class="bg-white p-6 rounded-lg shadow">
         <div class="flex justify-between items-center mb-4">
             <h3 class="text-lg font-semibold">Units</h3>

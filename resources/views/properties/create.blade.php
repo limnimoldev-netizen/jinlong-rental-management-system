@@ -87,7 +87,7 @@
                 <a href="/properties" class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">
                     Cancel
                 </a>
-                <button type="submit" class="bg-primary text-secondary px-6 py-2 rounded-lg hover:bg-blue-600">
+                <button type="submit" class="bg-blue-500 text-secondary px-6 py-2 rounded-lg hover:bg-blue-600">
                     Create Property
                 </button>
             </div>

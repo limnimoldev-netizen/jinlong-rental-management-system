@@ -21,7 +21,7 @@
             <a href="{{ route('properties.store') }}"
                class="flex items-center font-bold gap-3 px-4 py-2 rounded-lg
                {{ request()->routeIs('properties.*') ? 'bg-white/20' : 'hover:bg-white/10' }}">
-                <i class="fa-solid fa-house"></i>
+                <i class="fas fa-building "></i>
                 Properties
             </a>
 

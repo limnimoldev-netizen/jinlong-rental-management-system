@@ -3,21 +3,23 @@
 @section('content')
 
 <div class="p-6">
-        <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
-                <i class="fas fa-home text-xl"></i>
+        <div class="flex justify-between items-center mb-6">
+            <div class="flex items-center gap-4">
+                
+                <div>
+                    <h1 class="text-[26px] font-bold">Units</h1>
+                    <p class="text-gray-500 text-sm">Unit Management</p>
+                </div>
             </div>
-            <div>
-                <h1 class="text-[26px] font-bold">Units</h1>
-                <p class="text-gray-500 text-sm">Unit Management</p>
+            <div class="flex gap-3">
+                <a href="/units/create" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+                    <i class="fas fa-plus"></i>
+                    Add New 
+                </a>
+                
             </div>
         </div>
-        <div class="flex gap-3">
-            <a href="/units/create" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
-                <i class="fas fa-plus"></i>
-                Add New Unit
-            </a>
-        </div>
+        
     </div>
 
     <div class="bg-white p-4 rounded-lg shadow mb-6">

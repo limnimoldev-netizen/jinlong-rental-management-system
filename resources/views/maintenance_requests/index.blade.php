@@ -5,9 +5,7 @@
 <div class="p-6">
     <div class="flex justify-between items-center mb-6">
         <div class="flex items-center gap-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
-                <i class="fas fa-tools text-xl"></i>
-            </div>
+            
             <div>
                 <h1 class="text-[26px] font-bold">Maintenance Requests</h1>
                 <p class="text-gray-500 text-sm">All maintenance activities in one view</p>
