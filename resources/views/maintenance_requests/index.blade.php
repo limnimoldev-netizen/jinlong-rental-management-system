@@ -13,54 +13,64 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">Total Requests</p>
-                    <p id="total" class="text-2xl font-semibold">3</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+        <!-- Total Requests Card -->
+        <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg p-6 text-blue-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-clipboard-list text-2xl text-blue-600"></i>
                 </div>
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-clipboard-list text-blue-500"></i>
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">Pending</p>
-                    <p id="pending" class="text-2xl font-semibold text-yellow-500">1</p>
-                </div>
-                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-clock text-yellow-500"></i>
+                <div class="text-right">
+                    <p class="text-blue-700 text-sm font-medium">Total</p>
+                    <h2 class="text-3xl font-bold">3</h2>
                 </div>
             </div>
+            <p class="text-blue-600 text-xs mt-2 opacity-80">All requests</p>
         </div>
-        
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">In Progress</p>
-                    <p id="progress" class="text-2xl font-semibold text-blue-500">1</p>
+
+        <!-- Pending Requests Card -->
+        <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl shadow-lg p-6 text-yellow-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-clock text-2xl text-yellow-600"></i>
                 </div>
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-spinner text-blue-500"></i>
+                <div class="text-right">
+                    <p class="text-yellow-700 text-sm font-medium">Pending</p>
+                    <h2 class="text-3xl font-bold">1</h2>
                 </div>
             </div>
+            <p class="text-yellow-600 text-xs mt-2 opacity-80">Awaiting action</p>
         </div>
-        
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">Completed</p>
-                    <p id="completed" class="text-2xl font-semibold text-green-500">1</p>
+
+        <!-- In Progress Card -->
+        <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl shadow-lg p-6 text-purple-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-spinner text-2xl text-purple-600"></i>
                 </div>
-                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-check-circle text-green-500"></i>
+                <div class="text-right">
+                    <p class="text-purple-700 text-sm font-medium">In Progress</p>
+                    <h2 class="text-3xl font-bold">1</h2>
                 </div>
             </div>
+            <p class="text-purple-600 text-xs mt-2 opacity-80">Being worked on</p>
         </div>
+
+        <!-- Completed Card -->
+        <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-xl shadow-lg p-6 text-green-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-check-circle text-2xl text-green-600"></i>
+                </div>
+                <div class="text-right">
+                    <p class="text-green-700 text-sm font-medium">Completed</p>
+                    <h2 class="text-3xl font-bold">1</h2>
+                </div>
+            </div>
+            <p class="text-green-600 text-xs mt-2 opacity-80">Finished tasks</p>
+        </div>
+
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -118,25 +128,25 @@
                 <table class="w-full text-sm">
                     <thead class="bg-gray-100">
                         <tr>
-                            <th class="px-4 py-2 text-left">ID</th>
-                            <th class="px-4 py-2 text-left">Tenant</th>
-                            <th class="px-4 py-2 text-left">Issue</th>
-                            <th class="px-4 py-2 text-left">Priority</th>
-                            <th class="px-4 py-2 text-left">Status</th>
+                            <th class="px-3 py-2 text-left w-1/8">ID</th>
+                            <th class="px-3 py-2 text-left w-1/4">Tenant</th>
+                            <th class="px-3 py-2 text-left w-1/4">Issue</th>
+                            <th class="px-3 py-2 text-left w-1/8">Priority</th>
+                            <th class="px-3 py-2 text-left w-1/8">Status</th>
                         </tr>
                     </thead>
                     
                     <tbody id="tableBody">
                         <tr class="border-b hover:bg-gray-50">
-                            <td class="px-4 py-2">#001</td>
-                            <td class="px-4 py-2">John Doe</td>
-                            <td class="px-4 py-2">Water Leak</td>
-                            <td class="px-4 py-2">
+                            <td class="px-3 py-2 text-sm">#001</td>
+                            <td class="px-3 py-2 text-sm">John Doe</td>
+                            <td class="px-3 py-2 text-sm">Water Leak</td>
+                            <td class="px-3 py-2">
                                 <span class="inline-block px-2 py-1 rounded text-xs font-medium bg-red-100 text-red-800">
                                     High
                                 </span>
                             </td>
-                            <td class="px-4 py-2">
+                            <td class="px-3 py-2">
                                 <span class="inline-block px-2 py-1 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
                                     Pending
                                 </span>
@@ -144,15 +154,15 @@
                         </tr>
                         
                         <tr class="border-b hover:bg-gray-50">
-                            <td class="px-4 py-2">#002</td>
-                            <td class="px-4 py-2">Jane Smith</td>
-                            <td class="px-4 py-2">Light Issue</td>
-                            <td class="px-4 py-2">
+                            <td class="px-3 py-2 text-sm">#002</td>
+                            <td class="px-3 py-2 text-sm">Jane Smith</td>
+                            <td class="px-3 py-2 text-sm">Light Issue</td>
+                            <td class="px-3 py-2">
                                 <span class="inline-block px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800">
                                     Low
                                 </span>
                             </td>
-                            <td class="px-4 py-2">
+                            <td class="px-3 py-2">
                                 <span class="inline-block px-2 py-1 rounded text-xs font-medium bg-blue-100 text-blue-800">
                                     In Progress
                                 </span>
@@ -160,15 +170,15 @@
                         </tr>
                         
                         <tr class="border-b hover:bg-gray-50">
-                            <td class="px-4 py-2">#003</td>
-                            <td class="px-4 py-2">Alex Kim</td>
-                            <td class="px-4 py-2">AC Not Working</td>
-                            <td class="px-4 py-2">
+                            <td class="px-3 py-2 text-sm">#003</td>
+                            <td class="px-3 py-2 text-sm">Alex Kim</td>
+                            <td class="px-3 py-2 text-sm">AC Not Working</td>
+                            <td class="px-3 py-2">
                                 <span class="inline-block px-2 py-1 rounded text-xs font-medium bg-red-100 text-red-800">
                                     High
                                 </span>
                             </td>
-                            <td class="px-4 py-2">
+                            <td class="px-3 py-2">
                                 <span class="inline-block px-2 py-1 rounded text-xs font-medium bg-green-100 text-green-800">
                                     Completed
                                 </span>

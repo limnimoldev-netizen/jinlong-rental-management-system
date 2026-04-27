@@ -28,7 +28,6 @@
                 </p>
             </div>
 
-            <!-- <i class="fa-solid fa-chevron-down text-xs opacity-70"></i> -->
 
         </div>
 

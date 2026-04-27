@@ -31,11 +31,59 @@ class PropertyController extends Controller
             'units' => $units,
         ]);
 
-        // return redirect() -> route('properties.properties');
-        return redirect('/properties') ;
+        
+        return redirect('/properties');
 
     }
 
+    /**
+     * Display the specified property.
+     */
+    public function show($id)
+    {
+        $property = Property::find($id);
+        
+        if (!$property) {
+            return redirect('/properties')->with('error', 'Property not found');
+        }
+        
+        return view('properties.show', compact('property'));
+    }
+
+    /**
+     * Show the form for editing the specified property.
+     */
+    public function edit($id)
+    {
+        $property = Property::find($id);
+        
+        if (!$property) {
+            return redirect('/properties')->with('error', 'Property not found');
+        }
+        
+        return view('properties.edit', compact('property'));
+    }
+
+    /**
+     * Update the specified property in storage.
+     */
+    
+
+    /**
+     * Remove the specified property from storage.
+     */
+    public function destroy($id)
+    {
+        $property = Property::find($id);
+        
+        if (!$property) {
+            return redirect('/properties')->with('error', 'Property not found');
+        }
+
+        $property->delete();
+
+        return redirect('/properties')->with('success', 'Property deleted successfully');
+    }
 
 };
 

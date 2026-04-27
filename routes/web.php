@@ -12,13 +12,15 @@ use Carbon\Traits\Units;
 
 // Properties
 
-Route::get('properties', [PropertyController::class, 'index']);
+Route::get('properties', [PropertyController::class, 'index'])->name('properties.index');
 Route::post('properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::get('properties/create', function () {
   
     return view('properties.create');
 });
 Route::get('properties/{id}', [PropertyController::class, 'show']);
+Route::get('properties/{id}/edit', [PropertyController::class, 'edit']);
+Route::delete('properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
 
 
 // Units
@@ -29,6 +31,9 @@ Route::get('units/create', function () {
     return view('units.create');
 });
 Route::get('units/{id}', [UnitController::class, 'show']);
+Route::get('units/{id}/edit', [UnitController::class, 'edit']);
+Route::put('units/{id}', [UnitController::class, 'update']);
+Route::delete('units/{id}', [UnitController::class, 'destroy']);
 
 
 
@@ -41,13 +46,16 @@ Route::get('/dashboards', function () {
 Route::post('/dashboards', [DashboardController::class, 'store'])->name('dashboards.store');
 
 
-// tenants
+// Tenants
 Route::get('tenants', [TenantController::class, 'index']);
-
-Route::get('/tenants', function () {
-    return view('tenants.index');
+Route::post('tenants', [TenantController::class, 'store'])->name('tenants.store');
+Route::get('tenants/create', function () {
+    
+    return view('tenants.create');
 });
-Route::post('/tenants', [TenantController::class, 'store'])->name('tenants.store');
+Route::get('tenants/{id}', [TenantController::class, 'show']);
+Route::get('tenants/{id}/edit', [TenantController::class, 'edit']);
+Route::delete('tenants/{id}', [TenantController::class, 'destroy']);
 
 
 
@@ -66,7 +74,7 @@ Route::post('/login', function () {
     $password = request('password');
 
     if ($email === 'limnimol.dev@gmail.com' && $password === '123456') {
-        return redirect('/properties');
+        return redirect('/dashboards');
     }
 
     return back();
@@ -76,6 +84,10 @@ Route::post('/login', function () {
 
 
 
+
+Route::get('/settings', function () {
+    return view('settings');
+});
 
 Route::get('/', function () {
     return view('login');

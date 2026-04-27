@@ -5,9 +5,7 @@
 <div class="p-6">
     <div class="flex justify-between items-center mb-6">
         <div class="flex items-center gap-4">
-            <!-- <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white font-bold">
-                <i class="fas fa-file-contract text-xl"></i>
-            </div> -->
+           
             <div>
                 <h1 class="text-[26px] font-bold">Leases</h1>
                 <p class="text-gray-500 text-sm">Manage rental contracts & agreements</p>
@@ -21,54 +19,60 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">Total Leases</p>
-                    <p id="total" class="text-2xl font-semibold">0</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+        <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg p-6 text-blue-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-file-contract text-2xl text-blue-600"></i>
                 </div>
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-file-contract text-blue-500"></i>
-                </div>
-            </div>
-        </div>
-        
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">Active</p>
-                    <p id="active" class="text-2xl font-semibold text-green-600">0</p>
-                </div>
-                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-check-circle text-green-500"></i>
+                <div class="text-right">
+                    <p class="text-blue-700 text-sm font-medium">Total</p>
+                    <h2 class="text-3xl font-bold">0</h2>
                 </div>
             </div>
+            <p class="text-blue-600 text-xs mt-2 opacity-80">All leases</p>
         </div>
-        
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">Expired</p>
-                    <p id="expired" class="text-2xl font-semibold text-red-500">0</p>
+
+        <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-xl shadow-lg p-6 text-green-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-check-circle text-2xl text-green-600"></i>
                 </div>
-                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-times-circle text-red-500"></i>
+                <div class="text-right">
+                    <p class="text-green-700 text-sm font-medium">Active</p>
+                    <h2 class="text-3xl font-bold">0</h2>
                 </div>
             </div>
+            <p class="text-green-600 text-xs mt-2 opacity-80">Currently active</p>
         </div>
-        
-        <div class="bg-white p-4 rounded-lg shadow">
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-gray-500 text-sm">Pending</p>
-                    <p id="pending" class="text-2xl font-semibold text-yellow-500">0</p>
+
+        <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-xl shadow-lg p-6 text-red-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-times-circle text-2xl text-red-600"></i>
                 </div>
-                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-clock text-yellow-500"></i>
+                <div class="text-right">
+                    <p class="text-red-700 text-sm font-medium">Expired</p>
+                    <h2 class="text-3xl font-bold">0</h2>
                 </div>
             </div>
+            <p class="text-red-600 text-xs mt-2 opacity-80">Ended contracts</p>
         </div>
+
+        <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl shadow-lg p-6 text-yellow-800 transform hover:scale-105 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
+                    <i class="fas fa-clock text-2xl text-yellow-600"></i>
+                </div>
+                <div class="text-right">
+                    <p class="text-yellow-700 text-sm font-medium">Pending</p>
+                    <h2 class="text-3xl font-bold">0</h2>
+                </div>
+            </div>
+            <p class="text-yellow-600 text-xs mt-2 opacity-80">Awaiting approval</p>
+        </div>
+
     </div>
 
     <div class="bg-white p-4 rounded-lg shadow mb-6">
@@ -87,18 +91,18 @@
         </div>
     </div>
 
-    <div class="bg-white p-4 rounded-lg shadow">
+    <div class="bg-white p-3 rounded-lg shadow">
         <div class="overflow-x-auto">
             <table class="w-full text-sm">
                 <thead class="bg-gray-100">
                     <tr>
-                        <th class="px-4 py-2 text-left">Tenant</th>
-                        <th class="px-4 py-2 text-left">Property</th>
-                        <th class="px-4 py-2 text-left">Start</th>
-                        <th class="px-4 py-2 text-left">End</th>
-                        <th class="px-4 py-2 text-left">Rent</th>
-                        <th class="px-4 py-2 text-left">Status</th>
-                        <th class="px-4 py-2 text-left">Actions</th>
+                        <th class="px-3 py-2 text-left w-1/6">Tenant</th>
+                        <th class="px-3 py-2 text-left w-1/8">Property</th>
+                        <th class="px-3 py-2 text-left w-1/8">Start</th>
+                        <th class="px-3 py-2 text-left w-1/8">End</th>
+                        <th class="px-3 py-2 text-left w-1/8">Rent</th>
+                        <th class="px-3 py-2 text-left w-1/8">Status</th>
+                        <th class="px-3 py-2 text-left w-1/8">Actions</th>
                     </tr>
                 </thead>
                 <tbody id="table"></tbody>

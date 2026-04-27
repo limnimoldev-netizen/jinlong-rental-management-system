@@ -66,8 +66,8 @@
         <div>
             <p class="text-base opacity-70 mb-2">Help and Support</p>
 
-            <a href="#"
-               class="flex items-center gap-3 px-4 py-2 font-bold rounded-lg hover:bg-white/10">
+            <a href="/settings"
+               class="flex items-center gap-3 px-4 py-2 font-bold rounded-lg hover:bg-white/10 {{ request()->routeIs('settings') ? 'bg-white/20' : '' }}">
                 <i class="fa-solid fa-gear"></i>
                 Settings
             </a>
