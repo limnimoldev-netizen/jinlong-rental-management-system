@@ -20,26 +20,26 @@ class TenantController extends Controller
             $last_name= $request->input('last_name');
             $phone= $request->input('phone');
             $email= $request->input('email');
-            $property_id= $request->input('property_id');
-            $unit_id= $request->input('unit_id');
-            $lease_start= $request->input('lease_start');
-            $lease_end= $request->input('lease_end');
-            $monthly_rent= $request->input('monthly_rent');
-            $status= $request->input('status');
-            $notes= $request->input('notes');
+            // $property_id= $request->input('property_id');
+            // $unit_id= $request->input('unit_id');
+            // $lease_start= $request->input('lease_start');
+            // $lease_end= $request->input('lease_end');
+            // $monthly_rent= $request->input('monthly_rent');
+            // $status= $request->input('status');
+            // $notes= $request->input('notes');
 
             Tenant::create([
                 'first_name'=>$first_name,
                 'last_name'=>$last_name,
                 'phone'=>$phone,
                 'email'=>$email,
-                'property_id'=>$property_id,
-                'unit_id'=>$unit_id,
-                'lease_start'=>$lease_start,
-                'lease_end'=>$lease_end,
-                'monthly_rent'=>$monthly_rent,
-                'status'=>$status,
-                'notes'=>$notes,
+                // 'property_id'=>$property_id,
+                // 'unit_id'=>$unit_id,
+                // 'lease_start'=>$lease_start,
+                // 'lease_end'=>$lease_end,
+                // 'monthly_rent'=>$monthly_rent,
+                // 'status'=>$status,
+                // 'notes'=>$notes,
             ]);
         
             return redirect()->route('tenants');

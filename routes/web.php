@@ -59,9 +59,6 @@ Route::delete('tenants/{id}', [TenantController::class, 'destroy']);
 
 
 
-
-
-
 Route::get('units', [UnitController::class, 'index']);
 Route::get('payments', [PaymentController::class, 'index']);
 Route::get('maintenance_requests', [MaintenanceRequestController::class, 'index']);
@@ -74,13 +71,12 @@ Route::post('/login', function () {
     $password = request('password');
 
     if ($email === 'limnimol.dev@gmail.com' && $password === '123456') {
-        return redirect('/dashboards');
+        return redirect('/properties');
     }
 
     return back();
 
 });
-
 
 
 

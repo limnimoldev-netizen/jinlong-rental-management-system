@@ -18,15 +18,15 @@
         <div class="bg-gradient-to-br to-purple-200 rounded-xl shadow-lg p-6 text-black">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
-                    <i class="fas fa-building text-2xl text-purple-600"></i>
+                    <i class="fas fa-building text-2xl text-blue-600"></i>
                 </div>
                 <div class="text-right">
-                    <p class="text-purple-700 text-sm font-medium">Total</p>
+                    <p class="text-blue-700 text-sm font-medium">Total</p>
                     <h2 class="text-3xl font-bold">{{ $properties->count() }}</h2>
                 </div>
             </div>
             @if($properties->count() > 0)
-                <p class="text-purple-600 text-xs mt-2 opacity-80">{{ $properties->first()->name }}</p>
+                <p class="text-blue-600 text-xs mt-2 opacity-80">{{ $properties->first()->name }}</p>
             @endif
         </div>
 

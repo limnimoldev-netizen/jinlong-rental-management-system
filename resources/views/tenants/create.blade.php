@@ -15,7 +15,6 @@
         <form method="POST" action="/tenants" class="space-y-6">
             @csrf
             
-            <!-- Personal Information -->
             <div class="mb-8">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b">Personal Information</h2>
                 
@@ -44,7 +43,6 @@
                 </div>
             </div>
 
-            <!-- Lease Information -->
             <div class="mb-8">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b">Lease Information</h2>
                 
@@ -95,7 +93,6 @@
                 </div>
             </div>
 
-            <!-- Status and Notes -->
             <div class="mb-8">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b">Additional Information</h2>
                 
@@ -116,14 +113,11 @@
                 </div>
             </div>
 
-            <!-- Action Buttons -->
             <div class="flex justify-end gap-4 pt-6 border-t">
-                <a href="/tenants" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-medium">
-                    <i class="fas fa-times mr-2"></i>
+                <a href="/tenants" class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50">
                     Cancel
                 </a>
                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium">
-                    <i class="fas fa-save mr-2"></i>
                     Create Tenant
                 </button>
             </div>

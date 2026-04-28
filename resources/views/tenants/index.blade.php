@@ -15,8 +15,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
 
-        <!-- Total Tenants Card -->
-        <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg p-6 text-blue-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br  rounded-xl shadow-lg p-6 text-blue-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-users text-2xl text-blue-600"></i>
@@ -29,8 +28,7 @@
             <p class="text-blue-600 text-xs mt-2 opacity-80">All tenants</p>
         </div>
 
-        <!-- Active Tenants Card -->
-        <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-xl shadow-lg p-6 text-green-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br  rounded-xl shadow-lg p-6 text-green-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-user-check text-2xl text-green-600"></i>
@@ -43,8 +41,7 @@
             <p class="text-green-600 text-xs mt-2 opacity-80">Currently active</p>
         </div>
 
-        <!-- Pending Tenants Card -->
-        <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl shadow-lg p-6 text-yellow-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br  rounded-xl shadow-lg p-6 text-yellow-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-clock text-2xl text-yellow-600"></i>
@@ -57,8 +54,7 @@
             <p class="text-yellow-600 text-xs mt-2 opacity-80">Awaiting approval</p>
         </div>
 
-        <!-- Total Properties Card -->
-        <div class="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl shadow-lg p-6 text-purple-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br rounded-xl shadow-lg p-6 text-purple-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-building text-2xl text-purple-600"></i>
@@ -233,13 +229,13 @@
                     </td>
                 </tr>
 
-                @if(empty($tenants ?? []))
+                <!-- @if(empty($tenants ?? []))
                 <tr>
                     <td colspan="  6" class="text-center py-4 text-gray-400">
                         No data yet
                     </td>
                 </tr>
-                @endif
+                @endif -->
 
             </tbody>
 

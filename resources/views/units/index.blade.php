@@ -15,7 +15,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
 
-        <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl shadow-lg p-6 text-blue-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br  rounded-xl shadow-lg p-6 text-blue-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-door-open text-2xl text-blue-600"></i>
@@ -28,7 +28,7 @@
             <p class="text-blue-600 text-xs mt-2 opacity-80">All units</p>
         </div>
 
-        <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-xl shadow-lg p-6 text-green-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br  rounded-xl shadow-lg p-6 text-green-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-check-circle text-2xl text-green-600"></i>
@@ -41,7 +41,7 @@
             <p class="text-green-600 text-xs mt-2 opacity-80">Ready for rent</p>
         </div>
 
-        <div class="bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl shadow-lg p-6 text-yellow-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br  rounded-xl shadow-lg p-6 text-yellow-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-home text-2xl text-yellow-600"></i>
@@ -54,7 +54,7 @@
             <p class="text-yellow-600 text-xs mt-2 opacity-80">Currently rented</p>
         </div>
 
-        <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-xl shadow-lg p-6 text-red-800 transform hover:scale-105 transition-all duration-300">
+        <div class="bg-gradient-to-br  rounded-xl shadow-lg p-6 text-red-800 ">
             <div class="flex items-center justify-between mb-4">
                 <div class="bg-white/30 p-3 rounded-lg backdrop-blur-sm">
                     <i class="fas fa-tools text-2xl text-red-600"></i>
