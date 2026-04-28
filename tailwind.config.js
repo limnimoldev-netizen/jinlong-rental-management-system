@@ -9,12 +9,18 @@ export default {
         './resources/**/*.js',
         './resources/**/*.vue',
     ],
+
     theme: {
         extend: {
+            colors: {
+                primary: '#9b8384',
+                secondary: '#f6f4f0',
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Roboto', 'sans-serif'],
             },
         },
     },
+
     plugins: [],
 };
